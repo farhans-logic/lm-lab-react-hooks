@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export const CountRenders = () => {
 	const [value, setValue] = useState('');
-	const count = 1;
+	const ref = useRef(0);
+	ref.current = ref.current + 1;
+	const count = ref.current;
 
 	return (
 		<>

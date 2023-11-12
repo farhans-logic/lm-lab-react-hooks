@@ -1,6 +1,14 @@
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import { Child1 } from './child_1';
 import { Child2 } from './child_2';
+
+export const ThemeContext = createContext<Theme>({
+    backgroundColor: "",
+    color: "",
+    padding: "",
+    margin: ""
+})
+
 
 export const Parent = () => {
 
